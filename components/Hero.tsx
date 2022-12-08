@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 
 type Props = {};
