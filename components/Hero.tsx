@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
@@ -30,6 +31,19 @@ function Hero({}: Props) {
           <span className="ml-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
+
+        {/* Nav buttons */}
+        <div className="pt-5">
+          <Link href="#about">
+            <button className="heroButton">About</button>
+          </Link>
+          <Link href="#projects">
+            <button className="heroButton">Projects</button>
+          </Link>
+          <Link href="#experience">
+            <button className="heroButton">Experience</button>
+          </Link>
+        </div>
       </div>
     </div>
   );
