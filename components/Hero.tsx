@@ -23,7 +23,7 @@ function Hero({}: Props) {
       /> */}
 
       {/* Typewriter text followed by cursor */}
-      <div>
+      <div className="z-20">
         <h2 className=" ml-3 text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Front End Developer
         </h2>
