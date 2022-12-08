@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter, Cursor, useTypewriter } from "react-simple-typewriter";
+import BackgroundCircles from "./BackgroundCircles";
 
 type Props = {};
 
@@ -11,7 +12,8 @@ function Hero({}: Props) {
   });
 
   return (
-    <div>
+    <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
+      <BackgroundCircles />
       {/* Typewriter text followed by cursor */}
       <h1>
         <span>{text}</span>
