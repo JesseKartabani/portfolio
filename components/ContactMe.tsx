@@ -24,20 +24,20 @@ const ContactMe = (props: Props) => {
     >
       <h3 className="subHeading">Contact</h3>
 
-      <div className="flex flex-col space-y-10">
+      <div className="flex flex-col sm:space-y-10  space-y-2">
         <h4 className="text-2xl sm:text-4xl font-semibold text-center pt-10 sm:pt-0">
           Let's Talk
         </h4>
 
-        <div className="space-y-10">
-          <div className="flex items-center space-x-3 justify-center">
+        <div className="sm:space-y-10 space-y-2">
+          <div className="flex items-center space-x-1 sm:space-x-3 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-1xl sm:text-2xl whitespace-nowrap">
               +61 452 515 822
             </p>
           </div>
 
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-2 sm:space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-1xl sm:text-2xl">jessekartabani@gmail.com</p>
           </div>
@@ -73,7 +73,7 @@ const ContactMe = (props: Props) => {
               placeholder="Message"
             />
             <button
-              className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold"
+              className="bg-[#F7AB0A] sm:py-5 py-2 px-10 rounded-md text-black font-bold"
               type="submit"
             >
               Submit
