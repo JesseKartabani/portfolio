@@ -39,10 +39,22 @@ function About({}: Props) {
           background
         </h4>
         <p className="text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eaque
-          vitae perferendis unde dolore delectus, magnam error impedit obcaecati
-          dolorem, sequi non officiis? Amet accusamus tempora dolorum excepturi
-          similique tenetur.
+          Hi there! My name is Jesse and I am a front-end developer with a
+          passion for creating intuitive and engaging user experiences. I have a
+          strong background in HTML, CSS, and JavaScript, as well as experience
+          with popular front-end frameworks such as React.
+          <br />
+          <br />
+          As a highly organized and detail-oriented, with a strong focus on
+          ensuring that my projects are delivered on time and to the highest
+          standards. In addition, Im a strong problem solver and enjoy the
+          challenge of finding creative solutions to complex issues.
+          <br />
+          <br />I am excited about the potential of the web and am constantly
+          seeking out new technologies and techniques to improve my skills and
+          stay at the forefront of the industry. If you have a project that you
+          think would be a good fit for my skills, please do not hesitate to get
+          in touch. I would love the opportunity to discuss it with you further.
         </p>
       </div>
     </motion.div>
