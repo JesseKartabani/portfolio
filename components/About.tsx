@@ -15,7 +15,7 @@ function About({}: Props) {
       <h3 className="subHeading">About</h3>
 
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 h-40 w-40 rounded-full object-cover
+        className="md:mb-0 flex-shrink-0 h-20 w-20 mt-10 rounded-full object-cover
         sm:w-56 sm:h-56 md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
         initial={{
           x: -200,
@@ -33,22 +33,22 @@ function About({}: Props) {
 
       {/* About me info */}
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-2xl sm:text-4xl font-semibold">
+        <h4 className="text-1xl sm:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-sm sm:text-base">
+        <p className="text-xs sm:text-base">
           Hi there! My name is Jesse and I am a front-end developer with a
           passion for creating intuitive and engaging user experiences. I have a
           strong background in HTML, CSS, and JavaScript, as well as experience
           with popular front-end frameworks such as React.
           <br />
           <br />
-          As a highly organized and detail-oriented, with a strong focus on
+          As a highly organized and detail-oriented individual, I take pride in
           ensuring that my projects are delivered on time and to the highest
-          standards. In addition, Im a strong problem solver and enjoy the
-          challenge of finding creative solutions to complex issues.
+          standards. I am also a strong problem solver and enjoy finding
+          creative solutions to complex issues.
           <br />
           <br />I am excited about the potential of the web and am constantly
           seeking out new technologies and techniques to improve my skills and
