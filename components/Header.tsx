@@ -45,7 +45,7 @@ function Header({}: Props) {
           }}
           transition={{ duration: 1.5 }}
           whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-          className="flex flex-row items-center text-grey-300 pr-4 py-2"
+          className="flex flex-row items-center text-grey-300 pr-2 py-2"
         >
           {/* Contact Icon */}
           <svg
