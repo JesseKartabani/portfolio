@@ -25,24 +25,28 @@ const ContactMe = (props: Props) => {
       <h3 className="subHeading">Contact</h3>
 
       <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">Let's Talk</h4>
+        <h4 className="text-2xl sm:text-4xl font-semibold text-center pt-10 sm:pt-0">
+          Let's Talk
+        </h4>
 
         <div className="space-y-10">
           <div className="flex items-center space-x-3 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl whitespace-nowrap">+61 452 515 822</p>
+            <p className="text-1xl sm:text-2xl whitespace-nowrap">
+              +61 452 515 822
+            </p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">jessekartabani@gmail.com</p>
+            <p className="text-1xl sm:text-2xl">jessekartabani@gmail.com</p>
           </div>
 
           <form
             className="flex flex-col space-y-2 w-fit mx-auto"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="flex space-x-2">
+            <div className="space-y-2 flex flex-col md:flex-row md:space-y-0 md:space-x-2">
               <input
                 {...register("name")}
                 className="contactInput"
