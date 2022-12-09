@@ -17,7 +17,7 @@
   }
 
   .subHeading {
-    @apply absolute top-7 uppercase tracking-[10px] text-gray-500 justify-evenly
-    md:tracking-[20px] md:top-24 md:text-2xl;
+    @apply absolute top-7 uppercase tracking-[5px] text-gray-500 justify-evenly
+    sm:tracking-[20px] md:top-24 sm:text-2xl;
   }
 }

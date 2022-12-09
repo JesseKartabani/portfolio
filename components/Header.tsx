@@ -54,7 +54,7 @@ function Header({}: Props) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-7 h-7 stroke-gray-500 fill-transparent mx-1"
+            className="w-7 h-7 stroke-gray-500 fill-transparent"
           >
             <path
               strokeLinecap="round"
@@ -63,7 +63,7 @@ function Header({}: Props) {
             />
           </svg>
 
-          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400 ml-1">
             Get In Touch
           </p>
         </motion.div>
