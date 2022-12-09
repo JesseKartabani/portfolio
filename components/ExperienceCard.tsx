@@ -22,42 +22,42 @@ function ExperienceCard({}: Props) {
 
       <div className="px-0 md:px-10">
         {/* Job role */}
-        <h4 className="text-4xl font-light">CEO</h4>
+        <h4 className="text-2xl sm:text-4xl font-light">CEO</h4>
 
         {/* Company worked for */}
-        <p className="font-bold text-2xl mt-1">Netlfix</p>
+        <p className="font-bold text-1xl sm:text-2xl mt-1">Netlfix</p>
 
         {/* Tech stack used at job (their logos) */}
         <div className="flex space-x-2 my-2">
           <img
-            className="h-10 w-10 rounded-full"
+            className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
             src="https://i.imgur.com/mmJnoiI.jpg"
             alt="Tech logo"
           />
           <img
-            className="h-10 w-10 rounded-full"
+            className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
             src="https://i.imgur.com/mmJnoiI.jpg"
             alt="Tech logo"
           />
           <img
-            className="h-10 w-10 rounded-full"
+            className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
             src="https://i.imgur.com/mmJnoiI.jpg"
             alt="Tech logo"
           />
           <img
-            className="h-10 w-10 rounded-full"
+            className="h-8 w-8 sm:h-10 sm:w-10 rounded-full"
             src="https://i.imgur.com/mmJnoiI.jpg"
             alt="Tech logo"
           />
         </div>
 
         {/* Starting and ending dates worked */}
-        <p className="uppercase py-5 text-gray-300">
+        <p className="uppercase py-5 text-gray-300 text-sm sm:text-base">
           Started work... - Ended...
         </p>
 
         {/* Summary points on what you did/acheived at the job */}
-        <ul className="list-disc space-y-4 ml-5 text-lg">
+        <ul className="list-disc space-y-4 ml-5 text-base sm:text-lg">
           <li>Summary points</li>
           <li>Summary points</li>
           <li>Summary points</li>

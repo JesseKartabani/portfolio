@@ -18,6 +18,6 @@
 
   .subHeading {
     @apply absolute top-7 uppercase tracking-[5px] text-gray-500 justify-evenly
-    sm:tracking-[20px] md:top-24 sm:text-2xl;
+    sm:tracking-[20px] xl:top-24 sm:text-2xl;
   }
 }
