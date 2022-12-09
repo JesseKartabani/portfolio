@@ -21,6 +21,7 @@ function Projects({}: Props) {
       >
         {projects.map((project, i) => (
           <div
+            key={i}
             className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5
           items-center justify-center p-20 md:p-44 "
           >
@@ -36,12 +37,12 @@ function Projects({}: Props) {
 
             {/* Project name */}
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="text-2xl sm:text-4xl font-semibold text-center">
                 Case Study {i}
               </h4>
 
               {/* Project description */}
-              <p className="text-lg text-center md:text-left">
+              <p className="text-sm sm:text-lg text-center md:text-left">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
                 unde labore quibusdam laborum rem modi quae similique quia
                 dolorem. Ratione commodi suscipit facilis eos hic maiores quasi
