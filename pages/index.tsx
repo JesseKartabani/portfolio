@@ -24,17 +24,19 @@ export default function Home() {
         <Hero />
       </section>
 
+      <section id="projects" className="snap-start">
+        <Projects />
+      </section>
+
       <section id="about" className="snap-center">
         <About />
       </section>
 
+      {/* 
       <section id="experience" className="snap-center">
         <WorkExperience />
       </section>
-
-      <section id="projects" className="snap-start">
-        <Projects />
-      </section>
+      */}
 
       <section id="contact" className="snap-start">
         <ContactMe />
