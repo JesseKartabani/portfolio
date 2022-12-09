@@ -27,12 +27,10 @@ const ContactMe = (props: Props) => {
       </h3>
 
       <div className="flex flex-col space-y-10">
-        <h4 className="decoration-[#F7AB0A]/50 underline text-4xl font-semibold text-center">
-          Let's Talk
-        </h4>
+        <h4 className="text-4xl font-semibold text-center">Let's Talk</h4>
 
         <div className="space-y-10">
-          <div className="flex items-center space-x-5 justify-center">
+          <div className="flex items-center space-x-3 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-2xl whitespace-nowrap">+61 452 515 822</p>
           </div>
