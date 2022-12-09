@@ -1,15 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 type Props = {};
 
 function Projects({}: Props) {
   const projects = [
-    { id: 1, name: "Netflix Clone", description: "Welcome to learning React!" },
+    {
+      id: 1,
+      name: "Netflix Clone",
+      description: "Welcome to learning React!",
+      website: "https://netflix-clone-528b0.web.app/",
+      github: "https://github.com/JesseKartabani/netflix-clone",
+      image: "https://i.imgur.com/mmJnoiI.jpg",
+    },
     {
       id: 2,
       name: "Uber Clone",
       description: "You can install React from npm.",
+      website: "",
+      github: "https://github.com/JesseKartabani/Uber-clone",
+      image: "https://i.imgur.com/mmJnoiI.jpg",
     },
   ];
 
@@ -39,7 +50,7 @@ function Projects({}: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}
-              src="https://i.imgur.com/mmJnoiI.jpg"
+              src={project.image}
               alt="Project Demo"
             />
 
@@ -53,6 +64,18 @@ function Projects({}: Props) {
               <p className="text-sm sm:text-lg text-center md:text-left">
                 {project.description}
               </p>
+
+              {/* Nav buttons */}
+              <div className="flex pt-5 space-x-2 justify-center">
+                <Link href={project.github} target="_blank">
+                  <button className="heroButton">Code</button>
+                </Link>
+                {project.website != "" && (
+                  <Link href={project.website} target="_blank">
+                    <button className="heroButton">Website</button>
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         ))}
