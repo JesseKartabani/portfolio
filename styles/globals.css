@@ -15,4 +15,9 @@
     border-[#242424] text-gray-500 placeholder-gray-500 transition-all
     focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40;
   }
+
+  .subHeading {
+    @apply absolute top-7 uppercase tracking-[10px] text-gray-500 justify-evenly
+    md:tracking-[20px] md:top-24 md:text-2xl;
+  }
 }
