@@ -22,7 +22,7 @@
   }
 
   .projectButton {
-    @apply px-2 sm:px-6 py-2 border rounded-full
+    @apply px-2 sm:px-6 py-2 border rounded-full bg-[rgb(36,36,36)]
     uppercase text-xs tracking-widest transition-all
   border-[#F7AB0A]/60 hover:border-[#F7AB0A] 
     hover:text-[#F7AB0A] hover:scale-105 duration-200;

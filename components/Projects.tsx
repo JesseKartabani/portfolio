@@ -61,12 +61,12 @@ function Projects({}: Props) {
               </h4>
 
               {/* Project description */}
-              <p className="text-sm sm:text-lg text-center md:text-left">
+              <p className="text-sm sm:text-lg text-center">
                 {project.description}
               </p>
 
               {/* Nav buttons */}
-              <div className="flex pt-5 space-x-2 justify-center">
+              <div className="flex pt-5 space-x-6 justify-center">
                 <Link href={project.github} target="_blank">
                   <button className="projectButton">{`<Code />`}</button>
                 </Link>
