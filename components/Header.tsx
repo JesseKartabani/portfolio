@@ -25,6 +25,7 @@ function Header({}: Props) {
       >
         {/* Social media icons */}
         <SocialIcon
+          target="_blank"
           fgColor="gray"
           bgColor="transparent"
           url="https://github.com/JesseKartabani"
