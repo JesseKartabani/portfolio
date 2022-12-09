@@ -20,4 +20,11 @@
     @apply absolute top-7 uppercase tracking-[5px] text-gray-500 justify-evenly
     sm:tracking-[20px] xl:top-24 sm:text-2xl ml-2;
   }
+
+  .projectButton {
+    @apply px-2 sm:px-6 py-2 border rounded-full
+    uppercase text-xs tracking-widest transition-all
+  border-[#F7AB0A]/60 hover:border-[#F7AB0A] text-[#F7AB0A]/60
+    hover:text-[#F7AB0A] hover:scale-105 duration-200;
+  }
 }
