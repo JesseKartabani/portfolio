@@ -4,7 +4,15 @@ import { motion } from "framer-motion";
 type Props = {};
 
 function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+  const projects = [
+    { id: 1, name: "Netflix Clone", description: "Welcome to learning React!" },
+    {
+      id: 2,
+      name: "Uber Clone",
+      description: "You can install React from npm.",
+    },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -19,9 +27,9 @@ function Projects({}: Props) {
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x
       snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
-        {projects.map((project, i) => (
+        {projects.map((project) => (
           <div
-            key={i}
+            key={project.id}
             className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5
           items-center justify-center p-20 md:p-44 "
           >
@@ -38,15 +46,12 @@ function Projects({}: Props) {
             {/* Project name */}
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-2xl sm:text-4xl font-semibold text-center">
-                Case Study {i}
+                {project.name}
               </h4>
 
               {/* Project description */}
               <p className="text-sm sm:text-lg text-center md:text-left">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio
-                unde labore quibusdam laborum rem modi quae similique quia
-                dolorem. Ratione commodi suscipit facilis eos hic maiores quasi
-                ipsum culpa nobis.
+                {project.description}
               </p>
             </div>
           </div>
