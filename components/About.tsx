@@ -15,8 +15,8 @@ function About({}: Props) {
       <h3 className="subHeading">About</h3>
 
       <motion.img
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover
-        md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 md:mb-0 flex-shrink-0 h-40 w-40 rounded-full object-cover
+        sm:w-56 sm:h-56 md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
         initial={{
           x: -200,
           opacity: 0,
@@ -33,12 +33,12 @@ function About({}: Props) {
 
       {/* About me info */}
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-2xl sm:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
+        <p className="text-sm sm:text-base">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eaque
           vitae perferendis unde dolore delectus, magnam error impedit obcaecati
           dolorem, sequi non officiis? Amet accusamus tempora dolorum excepturi
