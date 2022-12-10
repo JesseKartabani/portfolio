@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Cube from "./Cube";
 
 type Props = {};
 
@@ -14,22 +15,7 @@ function About({}: Props) {
     >
       <h3 className="subHeading">About</h3>
 
-      <motion.img
-        className="md:mb-0 flex-shrink-0 h-20 w-20 mt-10 rounded-full object-cover
-        sm:w-56 sm:h-56 md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
-        initial={{
-          x: -200,
-          opacity: 0,
-        }}
-        whileInView={{
-          x: 0,
-          opacity: 1,
-        }}
-        transition={{
-          duration: 1.2,
-        }}
-        src="https://i.imgur.com/mmJnoiI.jpg"
-      />
+      <Cube />
 
       {/* About me info */}
       <div className="space-y-10 px-0 md:px-10">
