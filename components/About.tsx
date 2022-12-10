@@ -19,12 +19,8 @@ function About({}: Props) {
 
       {/* About me info */}
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-1xl sm:text-4xl font-semibold">
-          Here is a{" "}
-          <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
-          background
-        </h4>
-        <p className="text-xs sm:text-base">
+        <h4 className="text-1xl sm:text-4xl font-semibold">Background</h4>
+        <p className="text-xs sm:text-base  text-justify">
           Hi there! My name is Jesse and I am a front-end developer with a
           passion for creating intuitive and engaging user experiences. I have a
           strong background in HTML, CSS, and JavaScript, as well as experience
