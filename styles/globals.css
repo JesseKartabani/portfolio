@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer components {
-  .heroButton {
-    @apply px-2 sm:px-6 py-2 border border-[#242424] rounded-full
-    uppercase text-xs tracking-widest text-gray-500 transition-all
-  hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40
-    hover:scale-105 duration-200;
+  button {
+    @apply px-2 sm:px-6 py-2 border rounded-full bg-[rgb(36,36,36)]
+    uppercase text-xs tracking-widest transition-all
+  border-[#F7AB0A]/60 hover:border-[#F7AB0A] 
+  hover:text-[#F7AB0A] hover:scale-105 duration-200;
   }
 
   .contactInput {
@@ -19,12 +19,5 @@
   .subHeading {
     @apply absolute top-7 uppercase tracking-[5px] text-gray-400 justify-evenly
     sm:tracking-[20px] xl:top-24 sm:text-3xl ml-2;
-  }
-
-  .projectButton {
-    @apply px-2 sm:px-6 py-2 border rounded-full bg-[rgb(36,36,36)]
-    uppercase text-xs tracking-widest transition-all
-  border-[#F7AB0A]/60 hover:border-[#F7AB0A] 
-    hover:text-[#F7AB0A] hover:scale-105 duration-200;
   }
 }

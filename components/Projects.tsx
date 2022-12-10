@@ -106,11 +106,11 @@ function Projects({}: Props) {
               {/* Nav buttons */}
               <div className="flex pt-5 space-x-6 justify-center">
                 <Link href={project.github} target="_blank">
-                  <button className="projectButton">{`<Code />`}</button>
+                  <button>{`<Code />`}</button>
                 </Link>
                 {project.website != "" && (
                   <Link href={project.website} target="_blank">
-                    <button className="projectButton">Website</button>
+                    <button>Website</button>
                   </Link>
                 )}
               </div>
