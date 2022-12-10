@@ -56,6 +56,15 @@ function Projects({}: Props) {
       github: "https://github.com/JesseKartabani/nba-stats",
       image: "/nbaProject.png",
     },
+
+    {
+      id: 6,
+      name: "Portfolio",
+      description: "",
+      website: "",
+      github: "https://github.com/JesseKartabani/portfolio",
+      image: "/portfolioProject.png",
+    },
   ];
 
   return (
