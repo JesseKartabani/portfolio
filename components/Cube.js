@@ -13,7 +13,8 @@ const Cube = () => {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    //Background color
+
+    // Background color
     renderer.setClearColor("rgb(36, 36, 36)");
     renderer.setSize(width, height);
     mount.current.appendChild(renderer.domElement);
@@ -23,8 +24,37 @@ const Cube = () => {
 
     //ADD CUBE
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    //Cube color
-    const material = new THREE.MeshBasicMaterial({ color: "#F7AB0A" });
+
+    // Create a ShaderMaterial with a gradient
+    const vertexShader = `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `;
+
+    const fragmentShader = `
+      uniform vec3 topColor;
+      uniform vec3 bottomColor;
+      varying vec2 vUv;
+
+      void main() {
+        float y = vUv.y;
+        vec3 color = mix(bottomColor, topColor, y);
+        gl_FragColor = vec4(color, 1.0);
+      }
+    `;
+
+    const material = new THREE.ShaderMaterial({
+      uniforms: {
+        topColor: { value: new THREE.Color("#F7AB0A") },
+        bottomColor: { value: new THREE.Color("#FFCC00") },
+      },
+      vertexShader,
+      fragmentShader,
+    });
+
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
     camera.position.z = 4;
