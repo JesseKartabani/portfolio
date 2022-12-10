@@ -17,8 +17,8 @@
   }
 
   .subHeading {
-    @apply absolute top-7 uppercase tracking-[5px] text-gray-500 justify-evenly
-    sm:tracking-[20px] xl:top-24 sm:text-2xl ml-2;
+    @apply absolute top-7 uppercase tracking-[5px] text-gray-400 justify-evenly
+    sm:tracking-[20px] xl:top-24 sm:text-3xl ml-2;
   }
 
   .projectButton {
