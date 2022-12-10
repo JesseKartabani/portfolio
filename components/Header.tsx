@@ -26,7 +26,7 @@ function Header({}: Props) {
         {/* Social media icons */}
         <SocialIcon
           target="_blank"
-          fgColor="gray"
+          fgColor="#9CA3AF"
           bgColor="transparent"
           url="https://github.com/JesseKartabani"
         />
@@ -55,7 +55,7 @@ function Header({}: Props) {
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-7 h-7 stroke-gray-500 fill-transparent"
+            className="w-7 h-7 stroke-gray-400 fill-transparent"
           >
             <path
               strokeLinecap="round"
