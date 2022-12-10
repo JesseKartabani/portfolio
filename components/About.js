@@ -2,9 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Cube from "./Cube";
 
-type Props = {};
-
-function About({}: Props) {
+function About() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,11 +13,15 @@ function About({}: Props) {
     >
       <h3 className="subHeading">About</h3>
 
-      <Cube />
+      <div>
+        <Cube />
+      </div>
 
       {/* About me info */}
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-1xl sm:text-4xl font-semibold">Background</h4>
+        <h4 className="text-1xl sm:pt-0 sm:text-4xl font-semibold">
+          Background
+        </h4>
         <p className="text-xs sm:text-base  text-justify">
           Hi there! My name is Jesse and I am a front-end developer with a
           passion for creating intuitive and engaging user experiences. I have a
