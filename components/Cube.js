@@ -11,7 +11,8 @@ const Cube = () => {
 
     //ADD SCENE
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
+    camera.position.set(-8, 0, -4);
     const renderer = new THREE.WebGLRenderer({ antialias: true });
 
     // Background color
@@ -24,6 +25,21 @@ const Cube = () => {
 
     //ADD CUBE
     const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+    //ADD SPHERE
+    // Sphere size
+    const sphereGeometry = new THREE.SphereGeometry(0.25, 32, 32);
+    // Sphere color
+    const sphereMaterial = new THREE.MeshBasicMaterial({ color: "gray" });
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    sphere.position.set(1.5, 0, 0);
+    scene.add(sphere);
+
+    const sphere2Geometry = new THREE.SphereGeometry(0.25, 32, 32);
+    const sphere2Material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Material);
+    sphere2.position.set(-1.5, 0, 0);
+    scene.add(sphere2);
 
     // Create a ShaderMaterial with a gradient
     const vertexShader = `
@@ -48,6 +64,7 @@ const Cube = () => {
 
     const material = new THREE.ShaderMaterial({
       uniforms: {
+        // Cube colors
         topColor: { value: new THREE.Color("#F7AB0A") },
         bottomColor: { value: new THREE.Color("#FFCC00") },
       },
@@ -63,6 +80,16 @@ const Cube = () => {
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
 
+      sphere.rotation.x += 0.01;
+      sphere.rotation.y += 0.01;
+      sphere.position.x = Math.cos(Date.now() * 0.001) * 2;
+      sphere.position.y = Math.sin(Date.now() * 0.001) * 2;
+
+      sphere2.rotation.x += 0.01;
+      sphere2.rotation.y += 0.01;
+      sphere2.position.x = Math.cos(Date.now() * 0.001 + 5) * 2;
+      sphere2.position.y = Math.sin(Date.now() * 0.001 + 5) * 2;
+
       //UPDATE ORBIT CONTROL
       controls.update();
 
@@ -77,7 +104,7 @@ const Cube = () => {
     };
   }, []);
 
-  return <div style={{ width: "400px", height: "400px" }} ref={mount} />;
+  return <div style={{ width: "600px", height: "600px" }} ref={mount} />;
 };
 
 export default Cube;
