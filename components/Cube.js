@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 const Cube = () => {
   const mount = useRef(null);
@@ -17,6 +18,9 @@ const Cube = () => {
     renderer.setSize(width, height);
     mount.current.appendChild(renderer.domElement);
 
+    //ADD ORBIT CONTROL
+    const controls = new OrbitControls(camera, renderer.domElement);
+
     //ADD CUBE
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     //Cube color
@@ -28,6 +32,11 @@ const Cube = () => {
     const animate = () => {
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
+
+      //UPDATE ORBIT CONTROL
+      controls.update();
+
+      //RENDER SCENE
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
     };
