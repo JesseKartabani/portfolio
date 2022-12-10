@@ -20,27 +20,6 @@ const Cube = () => {
     renderer.setSize(width, height);
     mount.current.appendChild(renderer.domElement);
 
-    //ADD ORBIT CONTROL
-    const controls = new OrbitControls(camera, renderer.domElement);
-
-    //ADD CUBE
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-
-    //ADD SPHERE
-    // Sphere size
-    const sphereGeometry = new THREE.SphereGeometry(0.25, 32, 32);
-    // Sphere color
-    const sphereMaterial = new THREE.MeshBasicMaterial({ color: "#4F00FF" });
-    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
-    sphere.position.set(1.5, 0, 0);
-    scene.add(sphere);
-
-    const sphere2Geometry = new THREE.SphereGeometry(0.25, 32, 32);
-    const sphere2Material = new THREE.MeshBasicMaterial({ color: "#1175A8" });
-    const sphere2 = new THREE.Mesh(sphere2Geometry, sphere2Material);
-    sphere2.position.set(-1.5, 0, 0);
-    scene.add(sphere2);
-
     // Create a ShaderMaterial with a gradient
     const vertexShader = `
       varying vec2 vUv;
@@ -61,6 +40,33 @@ const Cube = () => {
         gl_FragColor = vec4(color, 1.0);
       }
     `;
+
+    //ADD ORBIT CONTROL
+    const controls = new OrbitControls(camera, renderer.domElement);
+
+    //ADD CUBE
+    const geometry = new THREE.BoxGeometry(1, 1, 1);
+
+    //ADD SPHERES
+    const sphereMaterial = new THREE.ShaderMaterial({
+      uniforms: {
+        // Colors for the gradient
+        topColor: { value: new THREE.Color("#333333") },
+        bottomColor: { value: new THREE.Color("#ffffff") },
+      },
+      vertexShader,
+      fragmentShader,
+    });
+    // Sphere size
+    const sphereGeometry = new THREE.SphereGeometry(0.25, 32, 32);
+    const sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    sphere.position.set(1.5, 0, 0);
+    scene.add(sphere);
+
+    const sphere2Geometry = new THREE.SphereGeometry(0.25, 32, 32);
+    const sphere2 = new THREE.Mesh(sphere2Geometry, sphereMaterial);
+    sphere2.position.set(-1.5, 0, 0);
+    scene.add(sphere2);
 
     const material = new THREE.ShaderMaterial({
       uniforms: {
