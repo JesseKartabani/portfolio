@@ -30,7 +30,7 @@ const ContactMe = (props: Props) => {
 
       <div className="flex flex-col sm:space-y-10  space-y-2">
         <h4 className="text-2xl sm:text-4xl font-semibold text-center pt-10 sm:pt-0">
-          Let's Talk
+          Let&apos;s Talk
         </h4>
 
         <div className="sm:space-y-10 space-y-2">

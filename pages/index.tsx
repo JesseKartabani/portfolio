@@ -16,6 +16,8 @@ export default function Home() {
     >
       <Head>
         <title>Jesse Kartabani</title>
+        <meta name="Portfolio" content="Font end developer portfolio" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
