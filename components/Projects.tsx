@@ -95,10 +95,11 @@ function Projects({}: Props) {
               viewport={{ once: true }}
             >
               <Image
+                className="w-auto h-auto"
                 src={project.image}
                 alt="Project Demo"
-                width="700"
-                height="700"
+                width={700}
+                height={700}
               />
             </motion.div>
             {/* Project name */}
