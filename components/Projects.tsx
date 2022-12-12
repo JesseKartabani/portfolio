@@ -85,7 +85,7 @@ function Projects({}: Props) {
           <div
             key={project.id}
             className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5
-          items-center justify-center p-20 md:p-44 "
+          items-center justify-center p-10 md:p-44 "
           >
             {/* Image of project */}
             <motion.div
@@ -110,7 +110,7 @@ function Projects({}: Props) {
               </h4>
 
               {/* Project description */}
-              <p className="text-sm sm:text-lg text-center">
+              <p className="hidden sm:block text-xs sm:text-lg text-center">
                 {project.description}
               </p>
 
