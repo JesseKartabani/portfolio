@@ -130,7 +130,7 @@ function Projects({}: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] sm:h-[500px] h-[200px] bg-[#F7AB0A]/10 left-0 -skew-y-12"></div>
+      <div className="w-full absolute top-[30%] sm:h-[500px] h-[150px] bg-[#F7AB0A]/10 left-0 -skew-y-12"></div>
     </motion.div>
   );
 }
