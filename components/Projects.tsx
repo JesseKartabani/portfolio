@@ -100,6 +100,7 @@ function Projects({}: Props) {
                 alt="Project Demo"
                 width={700}
                 height={700}
+                priority={true}
               />
             </motion.div>
             {/* Project name */}
