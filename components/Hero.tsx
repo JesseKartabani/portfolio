@@ -6,9 +6,10 @@ import BackgroundCircles from "./BackgroundCircles";
 type Props = {};
 
 function Hero({}: Props) {
+  // Makes text inside words look like its being typed
   const [text, count] = useTypewriter({
     words: ["Jesse Kartabani", "<Front End Developer />"],
-    loop: true,
+    loop: true, // animation never ends
     delaySpeed: 1000, // Time between words
   });
 
@@ -26,7 +27,6 @@ function Hero({}: Props) {
       />
       */}
 
-      {/* Typewriter text followed by cursor */}
       <div className="z-20">
         <h2
           className=" ml-3 text-sm uppercase text-gray-500 pb-2 tracking-[4px]
@@ -34,6 +34,8 @@ function Hero({}: Props) {
         >
           Front End Developer
         </h2>
+
+        {/* Typewriter text followed by cursor */}
         <h1 className="text-2xl sm:text-6xl font-semibold px-10">
           <span className="ml-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />

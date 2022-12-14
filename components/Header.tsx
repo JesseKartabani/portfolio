@@ -6,46 +6,55 @@ import Link from "next/link";
 type Props = {};
 
 function Header({}: Props) {
+  // Framer animation settings
+  const variants = {
+    hidden: { opacity: 0, scale: 0.5, x: -500 },
+    visible: { opacity: 1, scale: 1, x: 0 },
+    hovering: { scale: 1.2, transition: { duration: 0.2 } },
+  };
   return (
     <header className="sticky top-0 p-5 flex  justify-between max-w-7xl mx-auto z-20 items-center">
-      <motion.div
-        initial={{
-          x: -500,
-          opacity: 0,
-          scale: 0.5,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          scale: 1,
-        }}
-        transition={{ duration: 1.5 }}
-        whileHover={{ scale: 1.2, transition: { duration: 0.2 } }}
-        className="flex flex-row items-center"
-      >
-        {/* Social media icons */}
-        <SocialIcon
-          target="_blank"
-          fgColor="#9CA3AF"
-          bgColor="transparent"
-          url="https://github.com/JesseKartabani"
-        />
-      </motion.div>
+      <div className="flex flex-row items-center">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1.5 }}
+          whileHover="hovering"
+          variants={variants}
+        >
+          {/* Social media icons */}
+          <SocialIcon
+            target="_blank"
+            fgColor="#9CA3AF"
+            bgColor="transparent"
+            url="https://github.com/JesseKartabani"
+          />
+        </motion.div>
 
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          transition={{ duration: 1.5 }}
+          whileHover="hovering"
+          variants={variants}
+        >
+          <SocialIcon
+            target="_blank"
+            fgColor="#9CA3AF"
+            bgColor="transparent"
+            url="https://www.linkedin.com/in/jesse-kartabani/"
+          />
+        </motion.div>
+      </div>
       <Link href="#contact">
         <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
+          // Using a different inital x value because this div is coming in
+          // from the right side of screen instead of the left
+          initial={{ x: 500, opacity: 0, scale: 0.5 }}
+          animate="visible"
           transition={{ duration: 1.5 }}
-          whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+          whileHover="hovering"
+          variants={variants}
           className="flex flex-row items-center text-grey-300 pr-2 py-2"
         >
           {/* Contact Icon */}

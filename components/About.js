@@ -5,6 +5,7 @@ import Cube from "./Cube";
 function About() {
   return (
     <motion.div
+      // Fades the component in
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
@@ -13,6 +14,7 @@ function About() {
     >
       <h3 className="subHeading">About</h3>
 
+      {/* 3D interactive cube animation thats hidden on small screens */}
       <div className="hidden sm:block">
         <Cube />
       </div>

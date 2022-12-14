@@ -6,6 +6,7 @@ import Image from "next/image";
 type Props = {};
 
 function Projects({}: Props) {
+  // Project data that we use to map over to display each project
   const projects = [
     {
       id: 1,
@@ -69,6 +70,7 @@ function Projects({}: Props) {
 
   return (
     <motion.div
+      // Fades the whole component in
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
@@ -81,6 +83,7 @@ function Projects({}: Props) {
         className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x
       snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
       >
+        {/* Maps through all projects */}
         {projects.map((project) => (
           <div
             key={project.id}
@@ -89,6 +92,7 @@ function Projects({}: Props) {
           >
             {/* Image of project */}
             <motion.div
+              // Makes project image animate in from the top of the screen
               initial={{ opacity: 1, y: -300 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
@@ -130,6 +134,7 @@ function Projects({}: Props) {
         ))}
       </div>
 
+      {/* Vertical background stripe with a color gradient */}
       <div className="w-full absolute top-[30%] sm:h-[500px] h-[150px] bg-gradient-to-b from-[#F7AB0A]/40 via-[#D4920E]/40 to-[#B2730F]/40 left-0 -skew-y-12"></div>
     </motion.div>
   );

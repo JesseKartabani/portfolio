@@ -14,12 +14,15 @@ type Props = {};
 
 const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
+
+  // Opens default email client and prefills using form data
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
     window.location.href = `mailto:jessekartabani@gmail.com?subject=${formData.subject}&body=Hi. my name is ${formData.name}. ${formData.message}`;
   };
 
   return (
     <motion.div
+      // Fades component in
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}

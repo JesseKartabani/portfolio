@@ -5,6 +5,7 @@ type Props = {};
 
 function Footer({}: Props) {
   return (
+    // Up arrow svg that returns user to top of the site (the hero)
     <Link href="#hero">
       <footer className="sticky bottom-5 w-full cursor-pointer">
         <div className="flex items-center justify-center">
