@@ -43,10 +43,10 @@ function Hero({}: Props) {
 
         {/* Nav buttons */}
         <div className="pt-5 space-x-2">
-          <Link href="#about">
+          <Link data-testid="about-button" href="#about">
             <button>About</button>
           </Link>
-          <Link href="#projects">
+          <Link data-testid="projects-button" href="#projects">
             <button>Projects</button>
           </Link>
           {/* 

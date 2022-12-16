@@ -1,23 +1,25 @@
-import { render, screen } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import Hero from "../components/Hero";
 import "@testing-library/jest-dom";
 
 describe("Hero", () => {
-  it('renders the text "Front End Developer"', () => {
-    render(<Hero />);
-    const text = screen.getByText("Front End Developer");
+  it('renders the hero"', () => {
+    const { getByText } = render(<Hero />);
+
+    const text = getByText("Front End Developer");
+    const aboutButton = getByText("About");
+    const projectButton = getByText("Projects");
     expect(text).toBeInTheDocument();
+    expect(aboutButton).toBeInTheDocument();
+    expect(projectButton).toBeInTheDocument();
   });
 
-  it("renders the About button", () => {
-    render(<Hero />);
-    const button = screen.getByText("About");
-    expect(button).toBeInTheDocument();
-  });
+  it("links to correct places", () => {
+    const { getByTestId } = render(<Hero />);
 
-  it("renders the Projects button", () => {
-    render(<Hero />);
-    const button = screen.getByText("Projects");
-    expect(button).toBeInTheDocument();
+    const about = getByTestId("about-button");
+    const projects = getByTestId("projects-button");
+    expect(about).toHaveAttribute("href", "#about");
+    expect(projects).toHaveAttribute("href", "#projects");
   });
 });
