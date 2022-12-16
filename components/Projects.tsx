@@ -86,6 +86,7 @@ function Projects({}: Props) {
         {/* Maps through all projects */}
         {projects.map((project) => (
           <div
+            data-testid="project-card"
             key={project.id}
             className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5
           items-center justify-center p-10 md:p-44 "
@@ -99,6 +100,7 @@ function Projects({}: Props) {
               viewport={{ once: true }}
             >
               <Image
+                data-testid="project-image"
                 className="w-auto h-auto"
                 src={project.image}
                 alt="Project Demo"
@@ -120,11 +122,19 @@ function Projects({}: Props) {
 
               {/* Nav buttons */}
               <div className="flex pt-5 space-x-6 justify-center">
-                <Link href={project.github} target="_blank">
+                <Link
+                  data-testid="code-button"
+                  href={project.github}
+                  target="_blank"
+                >
                   <button>{`<Code />`}</button>
                 </Link>
                 {project.website != "" && (
-                  <Link href={project.website} target="_blank">
+                  <Link
+                    data-testid="website-button"
+                    href={project.website}
+                    target="_blank"
+                  >
                     <button>Website</button>
                   </Link>
                 )}
