@@ -24,6 +24,7 @@ function Header({}: Props) {
         >
           {/* Social media icons */}
           <SocialIcon
+            data-testid="social-icon"
             target="_blank"
             fgColor="#9CA3AF"
             bgColor="transparent"
@@ -39,6 +40,7 @@ function Header({}: Props) {
           variants={variants}
         >
           <SocialIcon
+            data-testid="social-icon"
             target="_blank"
             fgColor="#9CA3AF"
             bgColor="transparent"
@@ -46,7 +48,7 @@ function Header({}: Props) {
           />
         </motion.div>
       </div>
-      <Link href="#contact">
+      <Link data-testid="contact-link" href="#contact">
         <motion.div
           // Using a different inital x value because this div is coming in
           // from the right side of screen instead of the left
@@ -59,6 +61,7 @@ function Header({}: Props) {
         >
           {/* Contact Icon */}
           <svg
+            data-testid="contact-icon"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
