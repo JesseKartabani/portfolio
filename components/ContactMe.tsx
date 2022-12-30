@@ -80,7 +80,7 @@ const ContactMe = (props: Props) => {
               placeholder="Message"
             />
             <button
-              className="bg-[#F7AB0A] sm:py-5 py-2 px-10 rounded-md text-black font-bold"
+              className="bg-[#F7AB0A] sm:py-5 py-2 px-10 rounded-md text-black font-bold hover:text-black"
               type="submit"
             >
               Submit

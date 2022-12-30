@@ -11,7 +11,9 @@ function Header({}: Props) {
     hidden: { opacity: 0, scale: 0.5, x: -500 },
     visible: { opacity: 1, scale: 1, x: 0 },
     hovering: { scale: 1.2, transition: { duration: 0.2 } },
+    active: { opacity: 0.3, scale: 0.9, transition: { duration: 0.2 } },
   };
+
   return (
     <header className="sticky top-0 p-5 flex  justify-between max-w-7xl mx-auto z-20 items-center">
       <div className="flex flex-row items-center">
@@ -20,6 +22,7 @@ function Header({}: Props) {
           animate="visible"
           transition={{ duration: 1.5 }}
           whileHover="hovering"
+          whileTap="active"
           variants={variants}
         >
           {/* Social media icons */}
@@ -37,6 +40,7 @@ function Header({}: Props) {
           animate="visible"
           transition={{ duration: 1.5 }}
           whileHover="hovering"
+          whileTap="active"
           variants={variants}
         >
           <SocialIcon
@@ -56,6 +60,7 @@ function Header({}: Props) {
           animate="visible"
           transition={{ duration: 1.5 }}
           whileHover="hovering"
+          whileTap="active"
           variants={variants}
           className="flex flex-row items-center text-grey-300 pr-2 py-2"
         >
