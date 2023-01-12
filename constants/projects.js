@@ -1,22 +1,22 @@
 export const projects = [
   {
     id: 1,
-    name: "AI Image Generator",
+    name: "ChatGPT Enhanced",
     description:
-      "Utilizes the OpenAI API and the DALL-E model to generate original images based on user-provided text descriptions. The model is trained on the CIFAR-10 dataset and is able to generate a wide range of images, from photorealistic to highly stylized. The project also has a front-end interface built using React, allowing users to easily generate their own images.",
-    website: "https://ai-image-generator-f4c78.web.app/",
-    github: "https://github.com/JesseKartabani/ai-image-gen",
-    image: "/imageGenProject.png",
+      "Leverages OpenAI's GPT model (text-davinci-003) to generate natural language responses to user-provided prompts. This project extends the functionality of the original ChatGPT by adding speech-to-text capabilities. The user interface is built using React, allowing for an easy and efficient interaction with the AI-based service.",
+    website: "https://chat-gpt-enhanced.web.app/",
+    github: "https://github.com/JesseKartabani/chat-gpt-enhanced",
+    image: "/chatGptProject.png",
   },
 
   {
     id: 2,
-    name: "Clash Of Clans Stats",
+    name: "AI Image Generator",
     description:
-      "Cross-platform mobile and web app for tracking and displaying statistics for the popular mobile game Clash of Clans. It has been built using React Native. The app uses its own backend Express server to call the Clash of Clans API and fetch data about players, clans, and other game information. It then uses the React Query library to manage and cache this data, providing optimized performance. The app displays the data in a user-friendly format on both mobile and web platforms",
-    website: "",
-    github: "https://github.com/JesseKartabani/clash-of-clans-stats",
-    image: "/cocProject.png",
+      "Utilizes OpenAI's generative model DALL-E  to generate original images based on user-provided text descriptions. The model is trained on the CIFAR-10 dataset and is able to generate a wide range of images, from photorealistic to highly stylized. The project also has a front-end interface built using React, allowing users to easily generate their own images.",
+    website: "https://ai-image-generator-f4c78.web.app/",
+    github: "https://github.com/JesseKartabani/ai-image-gen",
+    image: "/imageGenProject.png",
   },
 
   {
@@ -61,8 +61,18 @@ export const projects = [
 
   {
     id: 7,
+    name: "Clash Of Clans Stats",
+    description:
+      "Cross-platform mobile and web app for tracking and displaying statistics for the popular mobile game Clash of Clans. It has been built using React Native. The app uses its own backend Express server to call the Clash of Clans API and fetch data about players, clans, and other game information. It then uses the React Query library to manage and cache this data, providing optimized performance. The app displays the data in a user-friendly format on both mobile and web platforms",
+    website: "",
+    github: "https://github.com/JesseKartabani/clash-of-clans-stats",
+    image: "/cocProject.png",
+  },
+
+  {
+    id: 8,
     name: "Portfolio",
-    description: "",
+    description: "Built using Next.js, TypeScript, and Tailwind CSS.",
     website: "",
     github: "https://github.com/JesseKartabani/portfolio",
     image: "/portfolioProject.png",
