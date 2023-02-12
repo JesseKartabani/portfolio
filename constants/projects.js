@@ -3,7 +3,7 @@ export const projects = [
     id: 1,
     name: "ChatGPT Enhanced",
     description:
-      "Leverages OpenAI's GPT model (text-davinci-003) to generate natural language responses to user-provided prompts. This project extends the functionality of the original ChatGPT by adding speech-to-text capabilities. The user interface is built using React, allowing for an easy and efficient interaction with the AI-based service.",
+      "By leveraging OpenAI's API, this project generates natural language responses in real-time using the GPT-3 and Codex models. It features speech-to-text integration and allows users to control the AI's logic and creativity balance. The React-based user interface provides an effortless interaction with the AI-powered service. The project implements secure authentication and a Stripe-powered subscription system, and offers a free trial period for users to evaluate the service.",
     website: "https://chat-gpt-enhanced.web.app/",
     github: "https://github.com/JesseKartabani/chat-gpt-enhanced",
     image: "/chatGptProject.png",
